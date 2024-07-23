@@ -1,0 +1,7 @@
+batteryCapacity= 50
+maxSteps= 500
+1#
+23
+12@4
+23
+1
