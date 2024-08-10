@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cpp_ex2",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/myrobot.exe",
+            //"args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\input_a.txt"],
+            //"args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\input_b.txt"],
+            "args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\input_c.txt"],
+            //"args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\inputs\\input.txt"],
+            //"args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\inputs\\input1.txt"],
+            //"args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\inputs\\input2.txt"],
+            //"args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\inputs\\input3.txt"],
+            //"args": ["C:\\Users\\Admin\\Desktop\\CPP Projects\\ex2\\inputs\\input4.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+            "preLaunchTask": "build",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
