@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++ build all files",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/Simulator.cpp",
+                "${workspaceFolder}/vacuumCleaner.cpp",
+                "${workspaceFolder}/FileParser.cpp",
+                "${workspaceFolder}/OutputHandler.cpp",
+                "${workspaceFolder}/House.cpp",
+                "${workspaceFolder}/Coordinates.cpp",
+                "${workspaceFolder}/Algorithm.cpp",
+                "-o",
+                "${workspaceFolder}/myrobot"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Task generated to build all project files."
+        }
+    ]
+}

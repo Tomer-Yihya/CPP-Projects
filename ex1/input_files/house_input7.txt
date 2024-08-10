@@ -1,0 +1,7 @@
+batteryCapacity= 100
+maxSteps= 1000
+12@#
+1234
+123456
+1234
+12

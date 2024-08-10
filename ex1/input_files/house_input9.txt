@@ -1,0 +1,4 @@
+batteryCapacity= 199diosbfkl
+maxSteps= 1000
+
+1@23456789
