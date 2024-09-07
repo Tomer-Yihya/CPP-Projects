@@ -513,7 +513,7 @@ int Algorithm_318506557_B::minDistance(int dest) {
             }
             Coordinates neighbor = {newX, newY};
             char graphVal = graph.getVal(neighbor);
-            if(goToDocking || goToClean){
+            if(goToDocking || goMapping){
                 if (graphVal != '-' && validLocation(neighbor) && !visited[newX][newY]) {
                     q.push(neighbor);
                     visited[newX][newY] = true;
@@ -521,7 +521,7 @@ int Algorithm_318506557_B::minDistance(int dest) {
                     parent[neighbor] = {current, directionEnums[i]};
                 }
             }
-            else { // (goToNewSpot || goMapping)
+            else { // (goToNewSpot || goToClean)
                 if (validLocation(neighbor) && !visited[newX][newY]) {
                     q.push(neighbor);
                     visited[newX][newY] = true;
