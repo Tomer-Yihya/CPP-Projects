@@ -2,9 +2,9 @@
 This repository contains a series of exercises focused on developing and refining a cleaning robot simulation. The robot navigates and cleans a house represented as a text file. Each exercise builds upon the previous one, progressively enhancing the robot's intelligence and efficiency.
 
 ## Repository Structure
-ex1/: Contains the code for the first exercise.
-ex2/: Contains the code for the second exercise.
-ex3/: Reserved for the third exercise (not yet uploaded).
+ex1/: Contains the code for the first exercise - random vacuum cleaner.
+ex2/: Contains the code for the second exercise - smart vacuum cleaner.
+ex3/: Contains the code for the third exercise - two different smart algorithm and multi-threads simulation.
 
 ## House Representation
 The house is represented as a text file with the following characters:
@@ -23,7 +23,17 @@ Functionality: The robot moves in a more systematic manner, using grid-based log
 
 ## Exercise 3 (ex3/)
 Objective: Implement two advanced algorithms to maximize cleaning efficiency.
-Functionality: The robot uses two distinct algorithms to clean the house with the fewest steps possible, aiming to be as efficient as possible. The goal is to optimize the cleaning process and minimize energy consumption, increasing the chances of winning an efficiency competition.
+Functionality: The robot uses two distinct algorithms to clean the house with the fewest steps possible, aiming to be as efficient as possible in order to increase the chance that one of the implementations would be effective in some cases and the other in other cases. 
+The goal is to optimize the cleaning process and minimize energy consumption, increasing the chances of winning an efficiency competition.
+
+Implementation of the algorithms:
+Algorithm A: 
+The robot uses two progression methods, the first circular and the second greedy. The circular progress is made by progressing "in rings" around the robot's docking station. If the robot cannot progress because it encounters an obstacle, it locates a point with a radius that is the same or one greater than the radius where it detected the obstacle and moves towards it.
+If the robot detects that it is "trapped" in the walls because the radius cannot be increased,, it concludes that it is no longer possible to move forward in a circular motion and switches to a greedy mode of operation so that it always searches for the nearest point that it needs to clean or that it has not yet been to until there is no dirt or new points left.
+
+Algorithm B: 
+A greedy algorithm that aims to clean as much as possible and therefore will always look for the closest known dirty spot.
+
 
 ## Constraints
 Max Steps: The robot is limited by a maximum number of steps, which is defined in the input file.
@@ -78,7 +88,7 @@ NsssssssssEsssssssssEsssssssssEsssssssssSsssssssssWsssNWWSssssssssssssssssssssEs
 
 ```
 
-## A representation of the house as the algorithm should refer to it during the run (from ex2)
+## A representation of the house as the algorithm should refer to it during the run (from ex2/ex3)
 ```
 currentLocation: layout[16][2] = D
 number of steps so far = 0        
@@ -99,7 +109,7 @@ W W W W W W W W W W W W W W W W W W W W W
 ```
 
 
-## Displaying the house after the algorithm has finished running (from ex2)
+## Displaying the house after the algorithm has finished running (from ex2/ex3)
 ```
 currentLocation: layout[16][2] = D
 number of steps so far = 2163     
